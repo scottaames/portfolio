@@ -1,10 +1,10 @@
 <template>
   <div>
-    <section class="hero is-medium is-primary is-bold">
+    <section class="hero is-small is-primary is-bold">
       <div class="hero-body">
         <div class="container">
           <h1 class="title is-2">
-            Contact Me
+            Want to chat? Send me a message!
           </h1>
         </div>
       </div>
@@ -16,7 +16,7 @@
             <div class="columns is-mobile is-centered is-multiline">
               <div class="column is-full">
                 <h1 class="has-text-grey-dark title has-text-centered is-2">
-                  Contact Me
+                  Contact Scott
                 </h1>
               </div>
               <div class="column is-full">

@@ -74,6 +74,8 @@ export default {
   position: relative;
   padding-bottom: 168px; /* height of your footer */
 }
+nav {
+}
 footer {
   position: absolute;
   bottom: 0;
