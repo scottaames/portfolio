@@ -1,12 +1,12 @@
 <template>
   <div>
-    <section class="hero is-medium is-primary is-bold">
+    <section class="hero is-medium is-dark-gray is-bold">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title is-2">
+          <h1 class="title is-2 has-text-white">
             {{ project.title }}
           </h1>
-          <h2 class="subtitle is-4">
+          <h2 class="subtitle is-4 has-text-white">
             {{ project.snippet }}
           </h2>
         </div>

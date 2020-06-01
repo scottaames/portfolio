@@ -3,7 +3,9 @@
     <div class="card">
       <div class="card-image">
         <figure class="image is-square">
-          <img :src="image" alt="Placeholder image" />
+          <router-link :to="'/project' + slug">
+            <img :src="image" alt="Placeholder image" />
+          </router-link>
         </figure>
       </div>
       <div class="card-content">

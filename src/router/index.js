@@ -2,9 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Contact from '../views/Contact.vue'
 import Projects from '../views/Projects.vue'
 import Project from '../views/Project.vue'
+import Navbar from '../components/NavBar.vue'
 
 Vue.use(VueRouter)
 
@@ -12,27 +12,22 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home,
+    components: { default: Home, header: Navbar },
   },
   {
     path: '/about',
     name: 'about',
-    component: About,
-  },
-  {
-    path: '/contact',
-    name: 'contact',
-    component: Contact,
+    components: { default: About, header: Navbar },
   },
   {
     path: '/projects',
     name: 'projects',
-    component: Projects,
+    components: { default: Projects, header: Navbar },
   },
   {
     path: '/project:slug',
     name: 'project',
-    component: Project,
+    components: { default: Project, header: Navbar },
   },
 ]
 

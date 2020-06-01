@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <section class="hero is-medium is-primary is-bold">
+  <div id="projects">
+    <section class="hero is-medium is-dark-gray is-bold">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title is-2">
+          <h1 class="title is-2 has-text-white">
             Projects that I have built
           </h1>
         </div>
