@@ -1,6 +1,6 @@
 <template>
   <div style="display:block;">
-    <div class="card" :style="{ backgroundImage: `url(${image})` }"></div>
+    <div class="card" :style="{ backgroundImage: `url(${imageUrl})` }"></div>
     <div class="text">some text</div>
   </div>
 </template>
@@ -9,12 +9,13 @@
 export default {
   name: 'PostCard',
   props: {
+    key: Number,
     title: String,
-    date: String,
-    snippet: String,
-    image: String,
-    slug: String,
+    subtitle: String,
     language: String,
+    imageUrl: String,
+    githubUrl: String,
+    demoUrl: String,
   },
   data() {
     return {}

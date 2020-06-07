@@ -33,7 +33,7 @@
           <div
             class="mix"
             :class="project.language"
-            :key="project.slug"
+            :key="project.key"
             v-for="project in projects"
             style="display: inline-block;"
           >
@@ -62,9 +62,14 @@ export default {
     return {
       projects: [
         {
+          key: 0,
           title: 'Draw Stars',
           subtitle: 'Python',
-          image: url(),
+          language: 'js',
+          imageUrl:
+            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/DrawStarsDemo.gif?token=AGELFKCLRWOVWFE7Y4FZBNK6422CM',
+          githubUrl: 'https://github.com/scottaames/DrawStars',
+          demoUrl: null,
         },
       ],
     }
