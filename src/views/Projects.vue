@@ -1,33 +1,58 @@
 <template>
   <div id="projects">
-    <section class="hero is-medium is-dark-gray is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title is-2 has-text-white">
-            Projects that I have built
-          </h1>
+    <div class="container is-fluid ">
+      <section class="section">
+        <div class="columns is-mobile is-multiline has-text-centered pb-3 mb-6">
+          <div class="column is-12 header-bar">
+            <div class="brand">
+              <h1 class="title pt-6 pb-4">
+                PROJECTS
+              </h1>
+            </div>
+            <div class="divider pb-3">
+              <hr />
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container is-fluid">
-        <div class="columns is-multiline">
+
+        <div class="controls">
+          <button type="button" class="control" data-filter="all">
+            ALL
+          </button>
+          <button type="button" class="control" data-filter=".vue">
+            VUE
+          </button>
+          <button type="button" class="control" data-filter=".react">
+            REACT
+          </button>
+          <button type="button" class="control" data-filter=".js">
+            JAVSCRIPT
+          </button>
+        </div>
+        <div class="portfolio">
           <div
-            class="column is-one-third"
+            class="mix"
+            :class="project.language"
             :key="project.slug"
             v-for="project in projects"
+            style="display: inline-block;"
           >
             <post-card v-bind="project"></post-card>
           </div>
+          <div class="gap"></div>
+          <div class="gap"></div>
+          <div class="gap"></div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 
 <script>
 import ProjectsService from '@/services/ProjectsService'
 import PostCard from '@/components/PostCard'
+import mixitup from 'mixitup'
+
 export default {
   name: 'projects',
   components: {
@@ -35,42 +60,29 @@ export default {
   },
   data() {
     return {
-      airtableResponse: [],
+      projects: [
+        {
+          title: 'Draw Stars',
+          subtitle: 'Python',
+          image: url(),
+        },
+      ],
     }
   },
   mounted: function() {
-    let self = this
-    async function getProjects() {
-      try {
-        const response = await ProjectsService.getProjects()
-        console.log(response)
-        self.airtableResponse = response.data.records
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    getProjects()
+    let container = document.querySelector('.portfolio')
+    let mixer = mixitup(container)
   },
-  computed: {
-    projects() {
-      let self = this
-      let projectList = []
-      for (let i = 0; i < self.airtableResponse.length; i++) {
-        if (self.airtableResponse[i].fields.Published) {
-          let project = {
-            title: self.airtableResponse[i].fields.Title,
-            date: self.airtableResponse[i].fields['Date Published'],
-            snippet: self.airtableResponse[i].fields.Excerpt,
-            image: self.airtableResponse[i].fields.Image[0].url,
-            slug: self.airtableResponse[i].fields.slug,
-          }
-          projectList.push(project)
-        }
-      }
-      return projectList
-    },
-  },
+  computed: {},
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+#projects {
+  background-color: lighten(#4a4a4a, 65);
+}
+.control {
+  transition: background 150ms;
+  cursor: pointer;
+}
+</style>

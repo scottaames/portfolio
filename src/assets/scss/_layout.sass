@@ -1,0 +1,77 @@
+@import "mixins"
+#app
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background-color: #eee
+
+.wrapper
+  height: 100%
+
+.page-header
+  height: 100vh
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+  background-position: center center
+  background-size: cover
+  margin: 0
+  padding: 0
+  border: 0
+  display: flex
+  align-items: center
+  justify-content: center
+
+.header-filter
+  position: relative
+
+  &:before,
+  &:after
+    position: absolute
+    z-index: 1
+    width: 100%
+    height: auto
+    display: block
+    left: 0
+    top: 0
+    content: ""
+
+  .layout
+    z-index: 2
+    position: relative
+
+.container-alt
+  padding-right: 15px
+  padding-left: 15px
+  display: flex
+  justify-content: space-between
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  text-align: center
+
+
+  .section-alt &
+    flex-direction: column
+
+.main
+  background: #FFF
+  position: relative
+  z-index: 3
+  margin: 0 30px 0
+  border-radius: 6px
+  @include shadow-16dp()
+
+.layout
+  margin-right: -15px
+  margin-left: -15px
+
+.divider
+  align-text: center
+
+  hr
+    width: 100px
+    height: 6px
+    background-color: #4a4a4a
+    margin:  auto
+
+.subtitle
+  line-height: 1.4 !important

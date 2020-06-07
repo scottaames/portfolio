@@ -4,22 +4,27 @@ import store from './store'
 import router from './router'
 import Parallax from './components/Parallax.vue'
 import VueScrollTo from 'vue-scrollto'
-import VueSimpleMarkdown from 'vue-simple-markdown'
-import 'vue-simple-markdown/dist/vue-simple-markdown.css'
+import VueScrollShow from 'vue-scroll-show'
 import VueLazyLoad from 'vue-lazyload'
-import './assets/scss/styles.scss'
-import VueWayPoint from 'vue-waypoint'
+import Posed from 'vue-pose'
+import VueScrollactive from 'vue-scrollactive'
+//import PerfectScrollbar from 'vue2-perfect-scrollbar'
+//import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
+
+import './assets/scss/styles.sass'
+import '@mdi/font/scss/materialdesignicons.scss'
 
 Vue.config.productionTip = false
 
 Vue.component(Parallax.name, Parallax)
 
-Vue.use(VueWayPoint)
+Vue.use(VueScrollactive)
+Vue.use(Posed)
+//Vue.use(PerfectScrollbar)
+Vue.use(VueScrollShow)
 Vue.use(VueScrollTo)
-Vue.use(VueSimpleMarkdown)
 Vue.use(VueLazyLoad, {
   observer: true,
-  // optional
   observerOptions: {
     rootMargin: '0px',
     threshold: 0.1,

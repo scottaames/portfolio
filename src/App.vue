@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <parallax class="section-alt page-header header-filter">
-        <div class="container-alt has-text-centered">
+      <parallax
+        id="home"
+        :fixed="true"
+        fixedClass="page-header"
+        containerClass="header-filter"
+        class="section-alt"
+      >
+        <div class="container-alt ">
           <div class="layout">
             <div class="stars"></div>
             <div class="stars2"></div>
@@ -25,7 +31,7 @@
               </p>
               <p class="control">
                 <a
-                  v-scroll-to="'#about'"
+                  v-scroll-to="'#projects'"
                   class="button is-link is-outlined is-medium"
                 >
                   View my work
@@ -35,17 +41,28 @@
           </div>
         </div>
       </parallax>
-      <Navbar />
-      <div class="main">
-        <div class="section-alt">
-          <div class="container-alt">
-            <div class="layout">
-              <About />
-            </div>
+
+      <Navbar
+        v-scroll-show="{
+          active: 'show slideInUp is-fixed-top',
+          delay: 1000,
+          offset: 500,
+          parentId: 'nav',
+        }"
+      />
+      <parallax
+        parallaxClass="main"
+        sectionClass="section-alt"
+        containerClass=""
+      >
+        <div id="about" class="container-alt">
+          <div class="layout">
+            <About />
           </div>
         </div>
+
         <div class="section-alt">
-          <div class="container-alt">
+          <div id="projects" class="container-alt">
             <div class="layout">
               <Projects />
             </div>
@@ -53,10 +70,9 @@
         </div>
 
         <ContactForm />
-      </div>
+      </parallax>
     </div>
-
-    <div class="footer">
+    <div class="footer my-6 py-6">
       <div class="content has-text-centered has-text-white">
         <p>
           Built by Scott Ames with Vue, Bulma, and Airtable.
@@ -83,149 +99,4 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "~compass-mixins"
-
-@function multiple-box-shadow ($n)
-  $value: '#{random(100)}vw #{random(100)}vh #FFF'
-  @for $i from 2 through $n
-    $value: '#{$value} , #{random(100)}vw #{random(100)}vh #FFF'
-
-  @return unquote($value)
-
-$shadows-small:  multiple-box-shadow(725)
-$shadows-medium: multiple-box-shadow(175)
-$shadows-big:    multiple-box-shadow(75)
-
-.stars
-  width: 1px
-  height: 1px
-  background: transparent
-  box-shadow: $shadows-small
-  animation         : animStar 50s linear infinite
-
-  &:after
-    content: ""
-    white-space: pre
-    position: absolute
-    top: 100vh
-    width: 1px
-    height: 1px
-    background: transparent
-    box-shadow: $shadows-small
-
-.stars2
-  width: 2px
-  height: 2px
-  background: transparent
-  box-shadow: $shadows-medium
-  animation         : animStar 100s linear infinite
-
-  &:after
-    content: ""
-    white-space: pre
-    position: absolute
-    top: 100vh
-    width: 2px
-    height: 2px
-    background: transparent
-    box-shadow: $shadows-medium
-
-.stars3
-  width: 3px
-  height: 3px
-  background: transparent
-  box-shadow: $shadows-big
-  animation         : animStar 150s linear infinite
-
-  &:after
-    content: ""
-    white-space: pre
-    position: absolute
-    top: 100vh
-    width: 3px
-    height: 3px
-    background: transparent
-    box-shadow: $shadows-big
-
-@keyframes animStar
-  from
-    transform: translateY(-50vh)
-  to
-    transform: translateY(-150vh)
-
-@mixin shadow-16dp()
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)
-
-.wrapper
-  height: auto
-  min-height: 100vh
-
-.page-header
-  height: 100vh
-  background-size: cover
-  background-position: top top
-  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
-  margin: 0
-  padding: 0
-  border: 0
-  display: flex
-  align-items: center
-  justify-content: center
-  &:before
-    background: rgba(0,0,0, 0.2)
-
-.header-filter
-  position: relative
-
-  &:before,
-  &:after
-    position: absolute
-    z-index: 1
-    width: 100%
-    height: 100%
-    display: flex
-    left: 0
-    top: 0
-    content: ""
-
-  .layout
-    z-index: 2
-    position: relative
-
-.container-alt
-  padding-right: 15px
-  padding-left: 15px
-  display: flex
-  justify-content: space-between
-  width: 100%
-  margin-left: auto
-  margin-right: auto
-  position: relative
-
-  .section-alt &
-    flex-direction: column
-
-.main
-  background: #FFF
-  position: relative
-  z-index: 3
-  margin: -60px 30px 0
-  border-radius: 6px
-  @include shadow-16dp()
-
-  .section-alt
-    padding: 50px 0
-
-.brand
-  text-align: center
-
-
-.divider
-  align-text: center
-  hr
-    width: 10vw
-    height: 5px
-    background-color: #4a4a4a
-    margin: 30px auto
-</style>
+<style lang="sass"></style>

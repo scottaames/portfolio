@@ -1,28 +1,7 @@
 <template>
-  <div class="post-card">
-    <div class="card">
-      <div class="card-image">
-        <figure class="image is-square">
-          <router-link :to="'/project' + slug">
-            <img :src="image" alt="Placeholder image" />
-          </router-link>
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          <div class="media-content">
-            <p class="title is-4">{{ title }}</p>
-            <p class="subtitle is-6">{{ date }}</p>
-          </div>
-        </div>
-        <div class="content">
-          <p>{{ snippet }}</p>
-          <router-link :to="'/project' + slug" class="button is-fullwidth"
-            >View Project</router-link
-          >
-        </div>
-      </div>
-    </div>
+  <div style="display:block;">
+    <div class="card" :style="{ backgroundImage: `url(${image})` }"></div>
+    <div class="text">some text</div>
   </div>
 </template>
 
@@ -35,6 +14,22 @@ export default {
     snippet: String,
     image: String,
     slug: String,
+    language: String,
+  },
+  data() {
+    return {}
   },
 }
 </script>
+
+<style lang="sass">
+.card
+  display: inline-block
+  height: 300px
+  max-width: 100%
+  transition: opacity 0.5s
+  width: calc(50vw - 8px)
+  box-shadow: none !important
+  background-position: center !important
+  background-size: cover !important
+</style>

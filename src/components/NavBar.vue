@@ -1,6 +1,13 @@
 <template>
-  <div>
-    <nav v-if="showNavOnScroll" class="navbar is-spaced has-background-dark">
+  <div id="nav">
+    <scrollactive
+      class="animated navbar is-fixed-top has-background-dark"
+      activeClass="has-text-danger"
+      :highlightFirstItem="true"
+      :scrollOffset="0"
+      :offset="200"
+      :modifyUrl="false"
+    >
       <div class="navbar-brand">
         <a class="navbar-item" to="/">
           <img src="../assets/img/scott-logo.png" width="112" height="28" />
@@ -20,6 +27,7 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
+
       <div
         id="navbarBasicExample"
         class="navbar-menu"
@@ -27,17 +35,17 @@
       >
         <div class="navbar-start">
           <span class="navbar-item">
-            <a v-scroll-to="'#home'" class="has-text-white">
+            <a href="#home" class="scrollactive-item has-text-white">
               Home
             </a>
           </span>
           <span class="navbar-item">
-            <a v-scroll-to="'#about'" class="has-text-white">
+            <a href="#about" class="scrollactive-item has-text-white">
               About
             </a>
           </span>
           <span class="navbar-item">
-            <a v-scroll-to="'#projects'" class="has-text-white">
+            <a href="#projects" class="scrollactive-item has-text-white">
               Projects
             </a>
           </span>
@@ -62,7 +70,7 @@
           </span>
         </div>
       </div>
-    </nav>
+    </scrollactive>
   </div>
 </template>
 
@@ -77,7 +85,7 @@ export default {
     }
   },
   methods: {
-    showModal: function() {
+    showModal() {
       let modal = document.getElementById('contact-modal')
       modal.classList.add('is-active')
     },
