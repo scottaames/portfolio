@@ -39,9 +39,6 @@
           >
             <post-card v-bind="project"></post-card>
           </div>
-          <div class="gap"></div>
-          <div class="gap"></div>
-          <div class="gap"></div>
         </div>
       </section>
     </div>
@@ -49,7 +46,6 @@
 </template>
 
 <script>
-import ProjectsService from '@/services/ProjectsService'
 import PostCard from '@/components/PostCard'
 import mixitup from 'mixitup'
 
@@ -67,9 +63,19 @@ export default {
           subtitle: 'Python',
           language: 'js',
           imageUrl:
-            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/DrawStarsDemo.gif?token=AGELFKCLRWOVWFE7Y4FZBNK6422CM',
+            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/DrawStarsDemo.png?token=AGELFKFUFGMQFLYGMGVWBD26424AG',
           githubUrl: 'https://github.com/scottaames/DrawStars',
           demoUrl: null,
+        },
+        {
+          key: 1,
+          title: 'CartoCosmos Website',
+          subtitle: 'Vue',
+          language: 'vue',
+          imageUrl:
+            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/DrawStarsDemo.png?token=AGELFKFUFGMQFLYGMGVWBD26424AG',
+          githubUrl: 'https://github.com/scottaames/CartoCosmosWebsite',
+          demoUrl: 'https://bit.ly/3fINbq5',
         },
       ],
     }

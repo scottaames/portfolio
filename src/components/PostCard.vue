@@ -9,7 +9,6 @@
 export default {
   name: 'PostCard',
   props: {
-    key: Number,
     title: String,
     subtitle: String,
     language: String,
@@ -29,8 +28,9 @@ export default {
   height: 300px
   max-width: 100%
   transition: opacity 0.5s
-  width: calc(50vw - 8px)
+  width: 300px
   box-shadow: none !important
   background-position: center !important
   background-size: cover !important
+  background-repeat: no-repeat !important
 </style>

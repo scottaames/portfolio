@@ -87,7 +87,7 @@
             <img class="clipped" :src="scottPic" />
           </figure>
           <div class="content">
-            <p class="title is-4">Bio</p>
+            <p class="title is-4">Who's Scott?</p>
             <p class="subtitle is-6 px-6 mx-6">
               I am a recent graduate from Northern Arizona University, where I
               earned a Bachelor's degree in Computer Science. I am currently
