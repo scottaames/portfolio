@@ -94,8 +94,18 @@ export default {
           subtitle: 'JavaScript/Bootstrap',
           language: 'js',
           imageUrl:
-            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/LeafletPlanetaryDemo.png?token=AGELFKCQVAYKM5TB4UIPMTS6425SI',
+            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/ConFusionDemo.png?token=AGELFKA5KI4WG4V4OVVDNDK6426LK',
           githubUrl: 'https://github.com/scottaames/conFusion',
+          demoUrl: null,
+        },
+        {
+          key: 4,
+          title: 'Portfolio Website',
+          subtitle: 'JavaScript/Bootstrap',
+          language: 'js',
+          imageUrl:
+            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/ConFusionDemo.png?token=AGELFKA5KI4WG4V4OVVDNDK6426LK',
+          githubUrl: 'https://github.com/scottaames/portfolio-site',
           demoUrl: null,
         },
       ],
