@@ -73,9 +73,20 @@ export default {
           subtitle: 'Vue',
           language: 'vue',
           imageUrl:
-            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/DrawStarsDemo.png?token=AGELFKFUFGMQFLYGMGVWBD26424AG',
+            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/CartoCosmosDemo.png?token=AGELFKEOE6XDFZCJV5X3OZC6425B2',
           githubUrl: 'https://github.com/scottaames/CartoCosmosWebsite',
           demoUrl: 'https://bit.ly/3fINbq5',
+        },
+        {
+          key: 2,
+          title: 'Leaflet-planetary',
+          subtitle: 'JavaScript/React',
+          language: 'react',
+          imageUrl:
+            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/CartoCosmosDemo.png?token=AGELFKEOE6XDFZCJV5X3OZC6425B2',
+          githubUrl:
+            'https://github.com/CartoCosmos/CartoCosmos/tree/master/app',
+          demoUrl: 'http://cartocosmos.github.io/',
         },
       ],
     }
