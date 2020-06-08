@@ -72,7 +72,7 @@ export default {
     color: #fff
     height: 100%
     width: 100px
-    font-size: 0.85rem
+    font-size: 1rem
     font-family: 'Raleway Bold', sans-serif !important
     font-weight: 600
   .fill
@@ -83,7 +83,7 @@ export default {
     opacity: 1
     padding: 0
   span
-    font-size: 0.85rem
+    font-size: 1rem
     padding: 0 8px 0 0
     z-index: 1
     font-style: italic

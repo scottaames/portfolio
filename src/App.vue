@@ -55,19 +55,9 @@
         sectionClass="section-alt"
         containerClass=""
       >
-        <div id="about" class="container-alt">
-          <div class="layout">
-            <About />
-          </div>
-        </div>
+        <About />
 
-        <div class="section-alt">
-          <div id="projects" class="container-alt">
-            <div class="layout">
-              <Projects />
-            </div>
-          </div>
-        </div>
+        <Projects />
 
         <ContactForm />
       </parallax>

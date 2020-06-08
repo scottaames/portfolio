@@ -6,7 +6,7 @@ import Parallax from './components/Parallax.vue'
 import VueScrollTo from 'vue-scrollto'
 import VueScrollShow from 'vue-scroll-show'
 import VueLazyLoad from 'vue-lazyload'
-import Posed from 'vue-pose'
+import VueWayPoint from 'vue-waypoint'
 import VueScrollactive from 'vue-scrollactive'
 //import PerfectScrollbar from 'vue2-perfect-scrollbar'
 //import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
@@ -19,7 +19,7 @@ Vue.config.productionTip = false
 Vue.component(Parallax.name, Parallax)
 
 Vue.use(VueScrollactive)
-Vue.use(Posed)
+Vue.use(VueWayPoint)
 //Vue.use(PerfectScrollbar)
 Vue.use(VueScrollShow)
 Vue.use(VueScrollTo)

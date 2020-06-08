@@ -1,8 +1,8 @@
 <template>
   <div class="container is-fluid pb-6 mb-6">
     <section class="section">
-      <div class="columns is-mobile is-multiline has-text-centered pb-3 mb-6">
-        <div class="column is-12">
+      <div class="columns is-mobile is-centered is-multiline pb-3 mb-3">
+        <div class="column is-full">
           <div class="brand">
             <h1 class="title pt-6 pb-4">
               ABOUT
@@ -14,7 +14,7 @@
         </div>
 
         <div
-          class="column is-one-quarter-desktop is-half-tablet is-full-mobile has-text-centered is-centered"
+          class="column is-one-quarter-desktop is-half-tablet is-three-quarters-mobile has-text-centered is-centered"
         >
           <div class="clip-container">
             <div class="clipped">
@@ -30,7 +30,7 @@
         </div>
 
         <div
-          class="column is-one-quarter-desktop is-half-tablet is-full-mobile has-text-centered is-vcentered"
+          class="column is-one-quarter-desktop is-half-tablet is-three-quarters-mobile has-text-centered is-vcentered"
         >
           <div class="clip-container">
             <div class="clipped">
@@ -46,7 +46,7 @@
           </div>
         </div>
         <div
-          class="column is-one-quarter-desktop is-half-tablet is-full-mobile has-text-centered"
+          class="column is-one-quarter-desktop is-half-tablet is-three-quarters-mobile has-text-centered"
         >
           <div class="clip-container">
             <div class="clipped">
@@ -62,7 +62,7 @@
           </div>
         </div>
         <div
-          class="column is-one-quarter-desktop is-half-tablet is-full-mobile has-text-centered"
+          class="column is-one-quarter-desktop is-half-tablet is-three-quarters-mobile has-text-centered"
         >
           <div class="clip-container">
             <div class="clipped">
@@ -82,13 +82,13 @@
 
     <section class="section">
       <div class="columns is-multiline is-3 has-text-centered is-tablet">
-        <div class="column is-half is-full-tablet">
+        <div class="column is-half">
           <figure class="image">
             <img class="clipped" :src="scottPic" />
           </figure>
           <div class="content">
             <p class="title is-4">Who's Scott?</p>
-            <p class="subtitle is-6 px-6 mx-6">
+            <p class="subtitle is-6 px-6">
               I am a recent graduate from Northern Arizona University, where I
               earned a Bachelor's degree in Computer Science. I am currently
               looking for full-time employment as either a full stack web
@@ -97,7 +97,7 @@
             </p>
           </div>
         </div>
-        <div class="column is-half is-full-tablet">
+        <div class="column is-half">
           <Chart />
         </div>
       </div>
