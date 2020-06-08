@@ -83,10 +83,20 @@ export default {
           subtitle: 'JavaScript/React',
           language: 'react',
           imageUrl:
-            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/CartoCosmosDemo.png?token=AGELFKEOE6XDFZCJV5X3OZC6425B2',
+            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/LeafletPlanetaryDemo.png?token=AGELFKCQVAYKM5TB4UIPMTS6425SI',
           githubUrl:
             'https://github.com/CartoCosmos/CartoCosmos/tree/master/app',
           demoUrl: 'http://cartocosmos.github.io/',
+        },
+        {
+          key: 3,
+          title: 'Bootstrap Restaurant Website',
+          subtitle: 'JavaScript/Bootstrap',
+          language: 'js',
+          imageUrl:
+            'https://raw.githubusercontent.com/scottaames/portfolio-site/master/src/assets/img/LeafletPlanetaryDemo.png?token=AGELFKCQVAYKM5TB4UIPMTS6425SI',
+          githubUrl: 'https://github.com/scottaames/conFusion',
+          demoUrl: null,
         },
       ],
     }
