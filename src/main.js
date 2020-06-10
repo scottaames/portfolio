@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
-import router from './router'
 import Parallax from './components/Parallax.vue'
 import VueScrollTo from 'vue-scrollto'
 import VueScrollShow from 'vue-scroll-show'
@@ -11,6 +10,7 @@ import VueScrollactive from 'vue-scrollactive'
 //import PerfectScrollbar from 'vue2-perfect-scrollbar'
 //import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
 
+import './assets/scss/animations.scss'
 import './assets/scss/styles.sass'
 import '@mdi/font/scss/materialdesignicons.scss'
 
@@ -31,8 +31,33 @@ Vue.use(VueLazyLoad, {
   },
 })
 
+Vue.mixin({
+  data: function() {
+    return {
+      window: {
+        width: 0,
+        height: 0,
+      },
+      offsetAmount: 0,
+    }
+  },
+  created: function() {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+  },
+  destroyed: function() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+  methods: {
+    handleResize() {
+      this.window.width = window.innerWidth
+      this.window.height = window.innerHeight
+      this.offsetAmount = this.window.height * 0.15
+    },
+  },
+})
+
 new Vue({
-  router,
   store,
   render: h => h(App),
 }).$mount('#app')

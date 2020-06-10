@@ -1,72 +1,94 @@
 <template>
   <div id="app">
-    <div class="wrapper">
-      <parallax
-        id="home"
-        :fixed="true"
-        fixedClass="page-header"
-        containerClass="header-filter"
-        class="section-alt"
+    <div id="home" class="canvas">
+      <ul id="scene" data-friction-x="0.03" data-friction-y="0.05">
+        <li class="layer" id="specks" data-depth="0.1"></li>
+        <li class="layer" id="layer-1" data-depth="0.15">
+          <div class="img" id="img-1"></div>
+        </li>
+        <li class="layer" id="layer-2" data-depth="0.25">
+          <div class="img" id="img-2"></div>
+        </li>
+        <li class="layer" id="layer-3" data-depth="0.45">
+          <div class="img" id="img-3"></div>
+        </li>
+      </ul>
+      <div
+        class="container is-fluid is-flex px-0 py-0 mx-0 my-0"
+        style="height:100%; max-width:100% !important; width:100% !important; flex-direction:column; justify-content: center;"
       >
-        <div class="container-alt ">
-          <div class="layout">
-            <div class="stars"></div>
-            <div class="stars2"></div>
-            <div class="stars3"></div>
-            <h1 class="title has-text-white is-1">
-              Hi, I'm
-              <span class="title is-1 has-text-danger">Scott Ames</span>.
-            </h1>
-            <h2 class="subtitle has-text-white is-3">
-              I'm a full-stack web developer.
-            </h2>
-            <div class="field is-grouped is-grouped-centered is-spaced">
-              <p class="control is-pulled-left">
-                <a
-                  v-scroll-to="'#about'"
-                  class="button is-primary is-outlined is-medium"
-                >
-                  About Me
-                </a>
-              </p>
-              <p class="control">
-                <a
-                  v-scroll-to="'#projects'"
-                  class="button is-link is-outlined is-medium"
-                >
-                  View my work
-                </a>
-              </p>
-            </div>
+        <h1 class="title has-text-white is-1">
+          Hi, I'm
+          <span class="title is-1 has-text-danger">Scott Ames</span>.
+        </h1>
+        <h2 class="subtitle has-text-white is-3">
+          I'm a full-stack web developer.
+        </h2>
+        <div class="field is-grouped is-grouped-centered is-spaced">
+          <p class="control is-pulled-left">
+            <a
+              v-scroll-to="'#about'"
+              class="button is-primary is-outlined is-medium mx-2 has-text-weight-bold"
+              style="border-width: 2px;"
+            >
+              ABOUT ME
+            </a>
+          </p>
+          <p class="control">
+            <a
+              v-scroll-to="'#projects'"
+              class="button is-danger is-outlined is-medium mx-2 has-text-weight-bold"
+              style="border-width: 2px;"
+            >
+              VIEW MY WORK
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <Navbar />
+    <About />
+
+    <Projects />
+
+    <Contact />
+    <div class="footer">
+      <div class="level my-5">
+        <div class="level-item">
+          <div class="link-wrap mx-4">
+            <a target="_blank" href="https://www.github.com/scottaames">
+              <span class="icon is-large has-text-grey-lighter">
+                <i class="fab fa-lg fa-github"></i>
+              </span>
+            </a>
           </div>
         </div>
-      </parallax>
-
-      <Navbar
-        v-scroll-show="{
-          active: 'show slideInUp is-fixed-top',
-          delay: 1000,
-          offset: 500,
-          parentId: 'nav',
-        }"
-      />
-      <parallax
-        parallaxClass="main"
-        sectionClass="section-alt"
-        containerClass=""
-      >
-        <About />
-
-        <Projects />
-
-        <ContactForm />
-      </parallax>
-    </div>
-    <div class="footer my-6 py-6">
-      <div class="content has-text-centered has-text-white">
-        <p>
-          Built by Scott Ames with Vue, Bulma, and Airtable.
-        </p>
+        <div class="level-item">
+          <div class="link-wrap mx-4">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/scott-ames-16763852/"
+            >
+              <span class="icon is-large has-text-grey-lighter">
+                <i class="fab fa-lg fa-linkedin-in"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="level-item">
+          <div class="link-wrap mx-4">
+            <a target="_blank" href="https://www.instagram.com/scottyames">
+              <span class="icon is-large has-text-grey-lighter">
+                <i class="fab fa-lg fa-instagram"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        Built by Scott Ames with
+        <a class="is-inline" href="https://www.vuejs.com">Vue.js</a> and
+        <a class="is-inline" href="https://www.bulma.io">Bulma</a>
       </div>
     </div>
   </div>
@@ -75,7 +97,7 @@
 <script>
 import About from '@/views/About.vue'
 import Projects from '@/views/Projects.vue'
-import ContactForm from '@/components/ContactForm.vue'
+import Contact from '@/views/Contact.vue'
 import Navbar from '@/components/NavBar.vue'
 
 export default {
@@ -83,7 +105,7 @@ export default {
   components: {
     About,
     Projects,
-    ContactForm,
+    Contact,
     Navbar,
   },
 }

@@ -2,7 +2,7 @@
 
 @function multiple-box-shadow ($n)
   $value: '#{random(100)}vw #{random(100)}vh #FFF'
-  @for $i from 2 through $n
+  @for $i from 0 through $n
     $value: '#{$value} , #{random(100)}vw #{random(100)}vh #FFF'
 
   @return unquote($value)

@@ -1,47 +1,18 @@
-@import "_plugins"
-@import "_background"
-@import "_mixins"
-@import "_layout"
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap')
-@import "~animate-sass/animate"
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap')
 
 $family-primary: 'Open Sans', sans-serif !default
 $title-family: 'Raleway-bold', sans-serif !default
 $subtitle-family: 'Raleway', sans-serif !default
 $title-size: 3rem !default
+$primary: #14b2ba !default
+$danger: #ba1032 !default
 $family-secondary: 'Raleway', sans-serif !default
 $family-sans-serif: 'Raleway', sans-serif !default
 $body-background-color: #eeeeee !default
 $button-family: $family-primary !default
-
 @import '~bulma/bulma.sass'
-
-
-.clip-container
-  height: 100px
-  width: 100px
-  margin: auto
-  margin-bottom: 0.75rem
-  .clipped
-    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)
-    background: $primary
-    height: 100%
-    width: 100%
-    margin: auto
-    display: flex
-    justify-content: center
-    align-items: center
-    i + >
-      font-size: 48px
-      height: 48px
-      width: 48px
-
-section
-  max-width: 1200px
-  margin: auto
-
-.no-active
-  opacity: 0
+@import "_layout"
+@import "_canvas"
 
 
 

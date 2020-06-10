@@ -1,11 +1,18 @@
 <template>
-  <div id="nav">
+  <div
+    id="nav"
+    v-scroll-show="{
+      active: 'animated',
+      delay: 800,
+      offset: 500,
+    }"
+  >
     <scrollactive
-      class="animated navbar is-fixed-top has-background-dark"
+      class="navbar fade-in is-fixed-top"
       activeClass="has-text-danger"
       :highlightFirstItem="true"
       :scrollOffset="0"
-      :offset="200"
+      :offset="0"
       :modifyUrl="false"
     >
       <div class="navbar-brand">
@@ -27,7 +34,6 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
-
       <div
         id="navbarBasicExample"
         class="navbar-menu"
@@ -36,37 +42,23 @@
         <div class="navbar-start">
           <span class="navbar-item">
             <a href="#home" class="scrollactive-item has-text-white">
-              Home
+              HOME
             </a>
           </span>
-          <span class="navbar-item">
+          <span class="navbar-item px-4">
             <a href="#about" class="scrollactive-item has-text-white">
-              About
+              ABOUT
             </a>
           </span>
-          <span class="navbar-item">
+          <span class="navbar-item px-4">
             <a href="#projects" class="scrollactive-item has-text-white">
-              Projects
+              PROJECTS
             </a>
           </span>
-        </div>
-        <div class="navbar-end">
-          <span class="navbar-item">
-            <a target="_blank" class="">
-              <span class="icon is-medium has-text-grey-lighter">
-                <i class="fab fa-2x fa-github"></i>
-              </span>
+          <span class="navbar-item px-4">
+            <a href="#contact" class="scrollactive-item has-text-white">
+              CONTACT
             </a>
-          </span>
-          <span class="navbar-item">
-            <button class="button is-link is-hover" @click.prevent="showModal">
-              <span class="icon">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <span>
-                Contact
-              </span>
-            </button>
           </span>
         </div>
       </div>
@@ -93,4 +85,9 @@ export default {
 }
 </script>
 
-<style type="text/css"></style>
+<style lang="sass">
+.navbar
+  background-color: #112931 !important
+.navbar-item
+  font-family: 'Raleway-medium'
+</style>
