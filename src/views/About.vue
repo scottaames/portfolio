@@ -142,9 +142,9 @@
 
     <div class="container mb-5">
       <div
-        class="columns is-vcentered is-multiline is-3 has-text-centered is-tablet"
+        class="columns is-vcentered is-centered is-multiline has-text-centered is-mobile"
       >
-        <div class="column is-half">
+        <div class="column is-half-tablet is-full mobile">
           <div
             v-scroll-show="{
               active: 'animated',
@@ -167,7 +167,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-half">
+        <div class="column is-half-tablet is-full mobile">
           <Chart />
         </div>
       </div>

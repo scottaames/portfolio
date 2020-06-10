@@ -29,16 +29,16 @@
             <a
               v-scroll-to="'#about'"
               class="button is-primary is-outlined is-medium mx-2 has-text-weight-bold"
-              style="border-width: 2px;"
+              style="border-width: 2px;z-index:99999;"
             >
               ABOUT ME
             </a>
           </p>
           <p class="control">
             <a
-              v-scroll-to="'#projects'"
+              v-scroll-to="{ el: '#projects', duration: 1000 }"
               class="button is-danger is-outlined is-medium mx-2 has-text-weight-bold"
-              style="border-width: 2px;"
+              style="border-width: 2px;z-index:99999;"
             >
               VIEW MY WORK
             </a>
@@ -46,14 +46,14 @@
         </div>
       </div>
     </div>
-    <Navbar />
     <About />
+    <Navbar />
 
     <Projects />
 
     <Contact />
     <div class="footer">
-      <div class="level my-5">
+      <div class="level is-mobile mb-4">
         <div class="level-item">
           <div class="link-wrap mx-4">
             <a target="_blank" href="https://www.github.com/scottaames">
@@ -87,8 +87,11 @@
       </div>
       <div class="content">
         Built by Scott Ames with
-        <a class="is-inline" href="https://www.vuejs.com">Vue.js</a> and
-        <a class="is-inline" href="https://www.bulma.io">Bulma</a>
+        <a class="is-inline has-text-info" href="https://www.vuejs.com"
+          >Vue.js</a
+        >
+        and
+        <a class="is-inline has-text-info" href="https://www.bulma.io">Bulma</a>
       </div>
     </div>
   </div>

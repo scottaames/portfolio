@@ -4,7 +4,7 @@
       active: 'animated',
       offset: this.offsetAmount,
     }"
-    class="columns is-multiline bars-wrap slide-in-right"
+    class="columns is-mobile is-centered is-multiline bars-wrap slide-in-right"
   >
     <div
       v-for="item in chartData"
@@ -48,41 +48,42 @@ export default {
 </script>
 
 <style lang="sass">
-section#about .bars-wrap:not(.animated) .fill
-  width: 0 !important
+@media screen and (min-width: 900px)
+  section#about .bars-wrap:not(.animated) .fill
+    width: 0 !important
 
-section#about .bar:nth-child(1) .fill
-  transition: 1.1s 0.2s width ease-in-out
+  section#about .bar:nth-child(1) .fill
+    transition: 1.1s 0.2s width ease-in-out
 
-section#about .bar:nth-child(2) .fill
-  transition: 1.2s 0.2s width ease-in-out
+  section#about .bar:nth-child(2) .fill
+    transition: 1.2s 0.2s width ease-in-out
 
-section#about .bar:nth-child(3) .fill
-  transition: 1.3s 0.2s width ease-in-out
+  section#about .bar:nth-child(3) .fill
+    transition: 1.3s 0.2s width ease-in-out
 
-section#about .bar:nth-child(4) .fill
-  transition: 1.4s 0.2s width ease-in-out
+  section#about .bar:nth-child(4) .fill
+    transition: 1.4s 0.2s width ease-in-out
 
-section#about .bar:nth-child(5) .fill
-  transition: 1.5s 0.2s width ease-in-out
+  section#about .bar:nth-child(5) .fill
+    transition: 1.5s 0.2s width ease-in-out
 
-section#about .bar:nth-child(6) .fill
-  transition: 1.6s 0.2s width ease-in-out
+  section#about .bar:nth-child(6) .fill
+    transition: 1.6s 0.2s width ease-in-out
 
-section#about .bar:nth-child(7) .fill
-  transition: 1.7s 0.2s width ease-in-out
+  section#about .bar:nth-child(7) .fill
+    transition: 1.7s 0.2s width ease-in-out
 
-section#about .bar:nth-child(8) .fill
-  transition: 1.8s 0.2s width ease-in-out
+  section#about .bar:nth-child(8) .fill
+    transition: 1.8s 0.2s width ease-in-out
 
-section#about .bar:nth-child(9) .fill
-  transition: 1.9s 0.2s width ease-in-out
+  section#about .bar:nth-child(9) .fill
+    transition: 1.9s 0.2s width ease-in-out
 
-section#about .bar:nth-child(10) .fill
-  transition: 2s 0.2s width ease-in-out
+  section#about .bar:nth-child(10) .fill
+    transition: 2s 0.2s width ease-in-out
 
-section#about .bar:nth-child(11) .fill
-  transition: 2.1s 0.2s width ease-in-out
+  section#about .bar:nth-child(11) .fill
+    transition: 2.1s 0.2s width ease-in-out
 
 $bar-color: #14b2ba
 .bars-wrap

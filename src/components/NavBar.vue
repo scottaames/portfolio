@@ -6,6 +6,7 @@
       delay: 800,
       offset: 500,
     }"
+    style="z-index:999999;"
   >
     <scrollactive
       class="navbar fade-in is-fixed-top"
@@ -16,7 +17,7 @@
       :modifyUrl="false"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" to="/">
+        <a class="navbar-item" href="/">
           <img src="../assets/img/scott-logo.png" width="112" height="28" />
         </a>
 
@@ -45,17 +46,17 @@
               HOME
             </a>
           </span>
-          <span class="navbar-item px-4">
+          <span class="navbar-item px-4-desktop">
             <a href="#about" class="scrollactive-item has-text-white">
               ABOUT
             </a>
           </span>
-          <span class="navbar-item px-4">
+          <span class="navbar-item px-4-desktop">
             <a href="#projects" class="scrollactive-item has-text-white">
               PROJECTS
             </a>
           </span>
-          <span class="navbar-item px-4">
+          <span class="navbar-item px-4-desktop">
             <a href="#contact" class="scrollactive-item has-text-white">
               CONTACT
             </a>
@@ -88,6 +89,13 @@ export default {
 <style lang="sass">
 .navbar
   background-color: #112931 !important
+  z-index: 9999 !important
 .navbar-item
   font-family: 'Raleway-medium'
+.navbar-menu
+  background-color: lighten(#112931, 4) !important
+  z-index: 9999 !important
+.navbar-burger.burger
+  z-index: 9999 !important
+  color: white
 </style>

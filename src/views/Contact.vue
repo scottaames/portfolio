@@ -286,9 +286,6 @@ export default {
     }
   },
   methods: {
-    closeModal: function() {
-      document.getElementById('contact-modal').classList.remove('is-active')
-    },
     sendEmail: function() {
       let params = {
         name: this.name,
@@ -338,7 +335,7 @@ $bg-color: #112931
 #contact
   background: $bg-color
   color: #fff
-  padding-top: 125px
+  padding: 175px 0
   position: relative
   .button.is-static
     color: #f5f5f5
