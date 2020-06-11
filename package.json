@@ -4,10 +4,10 @@
   "license": "UNLICENSED",
   "main": "src/main.js",
   "description": "Portfolio for Scott Ames",
-  "homepage": "http://github.com/scottaames/",
+  "homepage": "http://github.com/scottaames",
   "author": {
     "name": "Scott Ames",
-    "url": "https://scottaames.github.io/"
+    "url": "https://scottaames.github.io"
   },
   "repository": {
     "type": "git",
