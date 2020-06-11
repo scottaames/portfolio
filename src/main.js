@@ -8,10 +8,8 @@ import VueWayPoint from 'vue-waypoint'
 import VueScrollactive from 'vue-scrollactive'
 //import PerfectScrollbar from 'vue2-perfect-scrollbar'
 //import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
-
 import './assets/scss/animations.scss'
 import './assets/scss/styles.sass'
-import '@mdi/font/scss/materialdesignicons.scss'
 
 Vue.config.productionTip = false
 

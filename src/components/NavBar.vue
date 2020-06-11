@@ -88,13 +88,15 @@ export default {
 
 <style lang="sass">
 .navbar
-  background-color: #112931 !important
+  background-color: darken(#112931, 4) !important
   z-index: 9999 !important
 .navbar-item
   font-family: 'Raleway-medium'
 .navbar-menu
-  background-color: lighten(#112931, 4) !important
+  background-color: darken(#112931, 4)
   z-index: 9999 !important
+.navbar-menu.is-active
+  background-color: #112931 !important
 .navbar-burger.burger
   z-index: 9999 !important
   color: white

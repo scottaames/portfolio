@@ -107,10 +107,7 @@
   }
 }
 
-@media screen and (min-width: 900px) {
-  .waypoint {
-    opacity: 0;
-  }
+@media screen and (min-width: 960px) {
   .animated.slide-up {
     animation: slideUp 0.75s ease both;
   }

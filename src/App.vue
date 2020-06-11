@@ -28,7 +28,7 @@
           <p class="control is-pulled-left">
             <a
               v-scroll-to="'#about'"
-              class="button is-primary is-outlined is-medium mx-2 has-text-weight-bold"
+              class="button is-primary has-text-weight-medium is-family-secondary is-medium mx-2"
               style="border-width: 2px;z-index:99999;"
             >
               ABOUT ME
@@ -37,7 +37,7 @@
           <p class="control">
             <a
               v-scroll-to="{ el: '#projects', duration: 1000 }"
-              class="button is-danger is-outlined is-medium mx-2 has-text-weight-bold"
+              class="button is-danger is-family-secondary is-medium mx-2 has-text-weight-medium"
               style="border-width: 2px;z-index:99999;"
             >
               VIEW MY WORK

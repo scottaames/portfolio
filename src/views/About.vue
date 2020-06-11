@@ -20,7 +20,7 @@
       ></div>
       <div class="columns is-mobile is-centered is-multiline pb-5 mb-5">
         <div
-          class="column is-one-quarter-desktop is-half-tablet is-three-quarters-mobile has-text-centered is-centered"
+          class="column is-3-desktop is-5-tablet is-9-mobile has-text-centered is-centered"
         >
           <div
             v-scroll-show="{
@@ -48,7 +48,7 @@
         </div>
 
         <div
-          class="column is-one-quarter-desktop is-half-tablet is-three-quarters-mobile has-text-centered is-vcentered"
+          class="column is-3-desktop is-5-tablet is-9-mobile has-text-centered is-vcentered"
         >
           <div
             v-scroll-show="{
@@ -78,7 +78,7 @@
           </div>
         </div>
         <div
-          class="column is-one-quarter-desktop is-half-tablet is-three-quarters-mobile has-text-centered"
+          class="column is-3-desktop is-5-tablet is-9-mobile has-text-centered"
         >
           <div
             v-scroll-show="{
@@ -108,7 +108,7 @@
           </div>
         </div>
         <div
-          class="column is-one-quarter-desktop is-half-tablet is-three-quarters-mobile has-text-centered"
+          class="column is-3-desktop is-5-tablet is-9-mobile has-text-centered"
         >
           <div
             v-scroll-show="{
@@ -142,9 +142,9 @@
 
     <div class="container mb-5">
       <div
-        class="columns is-vcentered is-centered is-multiline has-text-centered is-mobile"
+        class="columns is-vcentered is-multiline has-text-centered is-mobile"
       >
-        <div class="column is-half-tablet is-full mobile">
+        <div class="column is-half-desktop is-full-mobile">
           <div
             v-scroll-show="{
               active: 'animated',
@@ -167,7 +167,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-half-tablet is-full mobile">
+        <div class="column is-6-desktop is-9-mobile is-offset-2-mobile">
           <Chart />
         </div>
       </div>
