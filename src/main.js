@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
 import Parallax from './components/Parallax.vue'
 import VueScrollTo from 'vue-scrollto'
 import VueScrollShow from 'vue-scroll-show'
@@ -58,6 +57,5 @@ Vue.mixin({
 })
 
 new Vue({
-  store,
   render: h => h(App),
 }).$mount('#app')
