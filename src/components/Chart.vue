@@ -4,14 +4,14 @@
       active: 'animated',
       offset: this.offsetAmount,
     }"
-    class="columns is-mobile is-centered is-multiline bars-wrap slide-in-right"
+    class="columns is-mobile is-multiline bars-wrap slide-in-right"
   >
     <div
       v-for="item in chartData"
       :key="item.technology"
       class="column is-full bar is-flex"
     >
-      <div class="bar fill" :style="getWidth(item.value)">
+      <div class="bar fill" :style="{ width: item.value + '%' }">
         <div class="tag flex">{{ item.technology }}</div>
       </div>
       <span>{{ item.value }}%</span>
@@ -39,16 +39,11 @@ export default {
       ],
     }
   },
-  methods: {
-    getWidth(value) {
-      return 'width: ' + value + '%'
-    },
-  },
 }
 </script>
 
 <style lang="sass">
-@media screen and (min-width: 900px)
+@media screen and (min-width: 960px)
   section#about .bars-wrap:not(.animated) .fill
     width: 0 !important
 
@@ -87,9 +82,12 @@ export default {
 
 $bar-color: #14b2ba
 .bars-wrap
-  margin: 50px auto 0 auto
-  max-width: 90%
+  margin: 1.75rem auto 0 auto !important
+  align-items: center
+  justify-content: center
+  max-width: 100%
   width: calc(100% - 15px)
+  padding: 0
 
 .bar
   align-items: center !important
@@ -112,7 +110,7 @@ $bar-color: #14b2ba
     height: 100%
     width: 100px
     font-size: 0.85rem
-    font-family: 'Raleway Bold', sans-serif !important
+    font-family: 'Raleway', sans-serif !important
     font-weight: 600
   .fill
     left: 0
@@ -129,11 +127,9 @@ $bar-color: #14b2ba
 .bar span
   display: initial
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 769px)
   .bars-wrap
-    margin: 0 0 0 0
-
-@media screen and (min-width: 960px)
+    margin: 0 !important
   .bar
     max-width: 90%
 </style>

@@ -3,13 +3,13 @@
     id="nav"
     v-scroll-show="{
       active: 'animated',
-      delay: 800,
-      offset: 500,
+      offset: -300,
     }"
+    class="fade-in"
     style="z-index:999999;"
   >
     <scrollactive
-      class="navbar fade-in is-fixed-top"
+      class="navbar is-fixed-top"
       activeClass="has-text-danger"
       :highlightFirstItem="true"
       :scrollOffset="0"
@@ -17,10 +17,6 @@
       :modifyUrl="false"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="../assets/img/scott-logo.png" width="112" height="28" />
-        </a>
-
         <a
           role="button"
           class="navbar-burger burger"
@@ -37,28 +33,38 @@
       </div>
       <div
         id="navbarBasicExample"
-        class="navbar-menu"
+        class="navbar-menu pl-5"
         :class="{ 'is-active': showNav }"
       >
         <div class="navbar-start">
-          <span class="navbar-item">
+          <span class="navbar-item pl-5">
             <a href="#home" class="scrollactive-item has-text-white">
               HOME
             </a>
           </span>
-          <span class="navbar-item px-4-desktop">
+          <span class="navbar-item pl-5">
             <a href="#about" class="scrollactive-item has-text-white">
               ABOUT
             </a>
           </span>
-          <span class="navbar-item px-4-desktop">
+          <span class="navbar-item pl-5">
             <a href="#projects" class="scrollactive-item has-text-white">
               PROJECTS
             </a>
           </span>
-          <span class="navbar-item px-4-desktop">
+          <span class="navbar-item pl-5">
             <a href="#contact" class="scrollactive-item has-text-white">
               CONTACT
+            </a>
+          </span>
+        </div>
+        <div class="navbar-end">
+          <span class="navbar-item">
+            <a download class="button is-link" href="">
+              <span class="icon is-small">
+                <i class="fas fa-download"></i>
+              </span>
+              <span>RESUME</span>
             </a>
           </span>
         </div>
@@ -91,7 +97,8 @@ export default {
   background-color: darken(#112931, 4) !important
   z-index: 9999 !important
 .navbar-item
-  font-family: 'Raleway-medium'
+  font-family: 'Raleway', sans-serif !important
+  font-weight: 500
 .navbar-menu
   background-color: darken(#112931, 4)
   z-index: 9999 !important

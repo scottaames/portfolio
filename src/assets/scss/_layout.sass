@@ -6,7 +6,7 @@ body
   overflow: hidden
   background: white
   text-align: center
-  margin: 0
+
 
 p.title
   color: #4a4a4a !important
@@ -48,19 +48,22 @@ p.title
   width: 100%
   margin: 0 auto
   box-sizing: border-box
-.no-active
-  opacity: 0
+
+@media screen and (min-width: 960px)
+  .no-active
+    opacity: 0
 
 .header
   color: #444649
-  font-family: "raleway-bold"
+  font-family: "Raleway"
   position: relative
+  font-weight: 700
   font-size: 3rem
 
 .header-bar
   background: #444649
   height: 5px
-  margin: 25px 0 75px 0
+  margin: 10px 0 50px 0
   width: 80px
 
 .footer
@@ -83,6 +86,6 @@ p.title
       transition: background 0.3s ease-in-out
 
 
-+tablet
+@media screen and (min-width: 769)
   .header-bar
-    margin: 25px 0 100px 0
+    margin: 20px 0 80px 0

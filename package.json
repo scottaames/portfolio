@@ -18,7 +18,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -b 'master' -r 'https://github.com/scottaames/scottaames.github.io.git' -d dist"
   },
   "dependencies": {
     "@mdi/font": "^5.3.45",

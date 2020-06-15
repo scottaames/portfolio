@@ -14,7 +14,7 @@
         v-scroll-show="{
           active: 'animated',
           offset: this.offsetAmount,
-          delay: 200,
+          delay: 400,
         }"
         class="header-bar slide-in-right"
       ></div>
@@ -37,7 +37,7 @@
             REACT
           </div>
           <div class="filter" data-filter=".js">
-            JAVSCRIPT
+            JAVASCRIPT
           </div>
         </div>
       </div>
@@ -174,7 +174,7 @@ export default {
   color: #ba1032;
 }
 .bold {
-  font-family: 'Raleway-bold';
+  font-family: 'Raleway';
 }
 .buttons-container {
   display: flex;
@@ -228,22 +228,14 @@ section#projects .filter-wrap {
 }
 section#projects .filter {
   cursor: pointer;
-  font-size: 6pt;
   font-weight: 600;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   transition: background-color 0.5s;
 }
 .mixitup-control-active {
   background: #ba1032;
   color: white;
   transition: left 0.5s ease-in-out;
-}
-section#projects .float-bar .row {
-  bottom: 0;
-  left: -30px;
-}
-section#projects .float-bar .row .filter {
-  color: #fff;
 }
 section#projects .text {
   left: 0;
@@ -262,16 +254,13 @@ section#projects #gallery .button-alt {
   transition: all 0.3s ease-in-out;
   z-index: 2;
 }
-section#projects #gallery .text .bold,
-section#projects #gallery .button-alt .bold {
-  font-size: 16pt;
-}
+
 section#projects #gallery .button-alt {
   bottom: 0;
   position: absolute;
   color: #ba1032;
   border: 2px solid #ba1032;
-  font-size: 13pt;
+  font-size: 0.9rem;
   margin: 0 auto;
   padding: 7px 0;
   width: 30%;
@@ -316,9 +305,8 @@ section#projects #gallery .mix:hover .button-alt {
   opacity: 1;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 769px) {
   section#projects .filter {
-    font-size: 11pt;
     margin: 0 15px;
     padding: 0 30px;
   }
@@ -375,7 +363,6 @@ section#projects #gallery .mix:hover .button-alt {
     height: 390px;
   }
   section#projects .filter {
-    font-size: 13pt;
     margin: 0 25px;
     padding: 0 40px;
   }

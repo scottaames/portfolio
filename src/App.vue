@@ -14,35 +14,34 @@
         </li>
       </ul>
       <div
-        class="container is-fluid is-flex px-0 py-0 mx-0 my-0"
-        style="height:100%; max-width:100% !important; width:100% !important; flex-direction:column; justify-content: center;"
+        class="container is-fluid is-flex"
+        style="height:100%; flex-direction:column; justify-content: center;"
       >
-        <h1 class="title has-text-white is-1">
+        <h1 class="title has-text-white is-1 is-size-2-mobile">
           Hi, I'm
-          <span class="title is-1 has-text-danger">Scott Ames</span>.
+          <span class="title is-1 is-size-2-mobile has-text-danger"
+            >Scott Ames</span
+          >.
         </h1>
-        <h2 class="subtitle has-text-white is-3">
-          I'm a full-stack web developer.
+        <h2 class="subtitle has-text-white is-3 is-size-4-mobile">
+          I'm a full stack web developer.
         </h2>
-        <div class="field is-grouped is-grouped-centered is-spaced">
-          <p class="control is-pulled-left">
-            <a
-              v-scroll-to="'#about'"
-              class="button is-primary has-text-weight-medium is-family-secondary is-medium mx-2"
-              style="border-width: 2px;z-index:99999;"
-            >
-              ABOUT ME
-            </a>
-          </p>
-          <p class="control">
-            <a
-              v-scroll-to="{ el: '#projects', duration: 1000 }"
-              class="button is-danger is-family-secondary is-medium mx-2 has-text-weight-medium"
-              style="border-width: 2px;z-index:99999;"
-            >
-              VIEW MY WORK
-            </a>
-          </p>
+        <div class="buttons is-centered">
+          <a
+            v-scroll-to="'#about'"
+            class="button is-primary has-text-weight-medium is-family-secondary"
+            style="z-index:99999;"
+          >
+            ABOUT ME
+          </a>
+
+          <a
+            v-scroll-to="{ el: '#projects', duration: 1000 }"
+            class="button is-danger is-family-secondary has-text-weight-medium"
+            style="z-index:99999;"
+          >
+            VIEW MY WORK
+          </a>
         </div>
       </div>
     </div>

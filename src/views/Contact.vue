@@ -26,7 +26,7 @@
         v-scroll-show="{
           active: 'animated',
           offset: this.offsetAmount,
-          delay: 200,
+          delay: 400,
         }"
         class="header-bar slide-in-left mb-4"
         style="background: #f5f5f5"
@@ -35,7 +35,7 @@
         v-scroll-show="{
           active: 'animated',
           offset: this.offsetAmount,
-          delay: 300,
+          delay: 500,
         }"
         class="paragraph has-text-weight-bold is-size-6 my-5 fade-in"
         style="color: #14b2ba"
@@ -55,7 +55,7 @@
                     offset: $data.offsetAmount,
                     delay: 100,
                   }"
-                  class="columns is-centered is-multiline"
+                  class="columns is-mobile is-centered is-multiline"
                 >
                   <div class="column is-full pb-0">
                     <div class="field is-horizontal">
@@ -113,7 +113,7 @@
                               v-model="phone"
                               class="input"
                               type="tel"
-                              placeholder="Your phone number (optional)"
+                              placeholder="Phone # (optional)"
                             />
                           </p>
                         </div>
@@ -144,7 +144,7 @@
                                   'is-success': passed,
                                 }"
                                 type="email"
-                                placeholder="e.g., john.doe@gmail.com"
+                                placeholder="Email address"
                               />
                               <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>
@@ -184,7 +184,7 @@
                                   'is-success': passed,
                                 }"
                                 type="text"
-                                placeholder="e.g. Employment opportunity, or just saying hi!"
+                                placeholder="Subject"
                               />
                               <span
                                 v-show="passed"
@@ -376,7 +376,13 @@ span > span:nth-child(4):not(.icon)
   color: #f5f5f5 !important
   opacity: 0.6
   transition: opacity 0.5s ease-in
+span input[type="text"]::-moz-placeholder, span input[type="tel"]::-moz-placeholder, span input[type="email"]::-moz-placeholder, span textarea::-moz-placeholder
+  color: #f5f5f5 !important
+  opacity: 0.6
+  transition: opacity 0.5s ease-in
 :focus::-webkit-input-placeholder
+  opacity: 0.9
+span input[type="text"]:focus::-moz-placeholder, span input[type="tel"]:focus::-moz-placeholder, span input[type="email"]:focus::-moz-placeholder, span textarea:focus::-moz-placeholder
   opacity: 0.9
 
 #contact svg
@@ -385,19 +391,20 @@ span > span:nth-child(4):not(.icon)
   top: 0 !important
   overflow: hidden !important
 
-.box .columns:not(.animated) .column
-  opacity: 0 !important
+@media screen and (min-width: 960px)
+  .box .columns:not(.animated) .column
+    opacity: 0 !important
 
-.box .columns .column:nth-child(1)
-  transition: 1s 1s opacity ease-in-out
-.box .columns .column:nth-child(2)
-  transition: 1s 1.1s opacity ease-in-out
-.box .columns .column:nth-child(3)
-  transition: 1s 1.2s opacity ease-in-out
-.box .columns .column:nth-child(4)
-  transition: 1s 1.3s opacity ease-in-out
-.box .columns .column:nth-child(5)
-  transition: 1s 1.4s opacity ease-in-out
-.box .columns .column:nth-child(6)
-  transition: 1s 2s opacity ease-in-out
+  .box .columns .column:nth-child(1)
+    transition: 1s 0.7s opacity ease-in-out
+  .box .columns .column:nth-child(2)
+    transition: 1s 0.8s opacity ease-in-out
+  .box .columns .column:nth-child(3)
+    transition: 1s 0.9s opacity ease-in-out
+  .box .columns .column:nth-child(4)
+    transition: 1s 1.0s opacity ease-in-out
+  .box .columns .column:nth-child(5)
+    transition: 1s 1.1s opacity ease-in-out
+  .box .columns .column:nth-child(6)
+    transition: 1s 1.2s opacity ease-in-out
 </style>
